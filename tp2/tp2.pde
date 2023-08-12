@@ -1,4 +1,5 @@
 https://youtu.be/TA2PHxtgOJY
+//no utilizo for anidados como habiamos acordado profe
 PImage ilusion;
 int cant = 14;
 boolean blendActive = false; 
