@@ -1,4 +1,5 @@
 https://youtu.be/tRfFGL1T3M4
+//este tp estaba para aprobar, aclaro que en ningun momento me mencionaste q utilice for anidados ;)
 int pantallaActual = 0;         //DECLARACIÓN
 int c = 18;
 String [] texto= new String [14];
