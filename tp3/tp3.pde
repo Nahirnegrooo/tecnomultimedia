@@ -1,3 +1,4 @@
+https://youtu.be/tRfFGL1T3M4
 int pantallaActual = 0;         //DECLARACIÓN
 int c = 18;
 String [] texto= new String [14];
