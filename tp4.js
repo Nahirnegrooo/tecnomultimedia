@@ -1,3 +1,4 @@
+//https://youtu.be/UE2q2nlC_Hw
 // Variables del juego
 let paddleWidth = 100;
 let paddleHeight = 10;
