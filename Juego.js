@@ -62,7 +62,7 @@ class Juego {
       
       textSize(20);
       fill(255);
-      text("Oh no :( ¡Perdiste! \n Garfio se llevo a Wendy", 150, 400);
+      text("Oh no :( ¡Perdiste! \n Garfio se llevo a Wendy \n Toca "n" para reiniciar", 150, 400);
       
     }
   }
