@@ -55,7 +55,7 @@ class Juego {
       
       textSize(20);
       fill(255);
-      text("¡Ganaste! \n Pudiste salvar a Wendy de las garras de Garfio", 150, 350);
+      text("¡Ganaste! \n Pudiste salvar a Wendy de las garras de Garfio \n Toca la letra "n" para reiniciar", 150, 350);
       
     } else if (this.pantalla === "perder") {
       image(this.perdiste, 0, 0, width, height);
