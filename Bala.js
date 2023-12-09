@@ -1,4 +1,4 @@
-class Bala{
+class Bala{  //clase para la bala
   constructor(posX, posY){
     this.posX = posX;
     this.posY = posY;
@@ -8,19 +8,19 @@ class Bala{
     this.disparada = false;
   }
   
-  dibujar(){
+  dibujar(){   //dibujo la bala si esta disparada
     if(this.disparada){
       fill(0);
       ellipse(this.posX, this.posY,this.alto ,this.ancho);
-      this.mover();
+      this.mover();  //y le pido q se mueva 
     }
   }
   
-  mover(){
-    this.posY-=7 ;
+  mover(){  //movimiento de la bala
+    this.posY-=5 ;
   }
   
-  disparar(){
+  disparar(){   // dispara la bala
     this.disparada = true;
   }
   
