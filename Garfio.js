@@ -8,7 +8,7 @@ class Garfio {
     this.vida = 100;
 
     this.velocidad = 1; // Velocidad de movimiento
-    this.direccion = -1; // 1 para mover a la derecha, -1 para mover a la izquierda
+    
   }
 
   dibujar() {
