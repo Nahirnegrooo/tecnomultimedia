@@ -1,18 +1,21 @@
+// en esta clse pude lograr reiniciar el juego, problema que me habian remarcado en la entrega anterior
+
 class Juego {
-  constructor(pantallas) {
+  constructor(pantallas){
     this.peter = new Peter();
     this.garfio = new Garfio();
     this.wendy = new Wendy();
-    this.bala = new Bala();
+    this.bala = new Bala(); 
     this.pantallas= pantallas;
+  
   }
 
-  actualizar() {
-    
-  if (this.garfio.colisionaConBala(this.bala)) {
+actualizar() {  //metodo de actualizar
+  
+    if (this.garfio.colisionaConBala(this.bala)) {
       this.pantallas.cambiarPantalla(9);
     }
-    
+
     if (this.garfio.colisionaConWendy(this.wendy)) {
       this.pantallas.cambiarPantalla (8);
     }
@@ -21,14 +24,13 @@ class Juego {
       this.peter.moverDerecha();
       this.peter.moverIzquierda();
     }
-    if (this.wendy.colisionaConBala(this.bala)) {
-
-      this.pantallas.cambiarPantalla (11);
+    if(this.wendy.colisionaConBala(this.bala)){
+    
+    this.pantallas.cambiarPantalla (11);
     }
-  }
+}
 
-
-  dibujar(pantallas, img10) {
+  dibujar(pantallas,img10) { // dibujar el juego, con los parametros necesarios 
 
     if (pantallas == 10) {
       background(0);
@@ -42,30 +44,35 @@ class Juego {
   }
 
 
-  teclaPresionada(keyCode) {
+  teclaPresionada(keyCode) {  // teclas para controlar el juego
     this.peter.teclaPresionada(keyCode);
+    this.peter.actualizar();
+    this.peter.teclaLiberada();
   }
 
- controlarDisparosAGarfio() {
+controlarDisparosAGarfio() {
     if (this.peter.haDisparadoBala()) {
       if (this.garfio.colisionaConBala(this.peter.bala)) {
+       this.garfio.recibirDaño(1);
+      }
+      if (this.garfio.muerto()) {
        this.pantallas.cambiarPantalla(9); 
       }
     }
   }
-  
-  controlarDisparosAWendy  () {
+   controlarDisparosAWendy  () {  //esto lo utilizo para controlar los disparos, si se hace la colision con la bala pasa  otra pantalla
     if (this.peter.haDisparadoBala()) {
       if (this.wendy.colisionaConBala(this.peter.bala)) {
-        this.pantallas.cambiarPantalla(11);
+       this.pantallas.cambiarPantalla(11); 
       }
     }
   }
-  reiniciar() {
-    this.peter = new Peter();
+  reiniciar(){            // reinicio
+   this.peter = new Peter();
     this.garfio = new Garfio();
     this.wendy = new Wendy();
-    this.bala = new Bala();
+    this.bala = new Bala(); 
     this.pantallas= pantallas;
+  
   }
 }
