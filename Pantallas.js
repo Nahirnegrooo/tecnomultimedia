@@ -183,8 +183,7 @@ class Pantallas { // clase madre de todo, aca esta la aventura grafica conectada
     this.juego.controlarDisparosAGarfio();
     this.juego.controlarDisparosAWendy();
   }
-
-  reinicioConTecla() { // metodo para reinicar el juego con la tecla enter
+ reinicioConTecla() { // metodo para reinicar el juego con la tecla enter
     if (keyCode=== ENTER ) {
       if (this.pantallaActual=== 8) {
         this.pantallaActual = 0;
@@ -194,6 +193,9 @@ class Pantallas { // clase madre de todo, aca esta la aventura grafica conectada
         this.juego.reiniciar();
       } else if (this.pantallaActual === 11) {
         this.pantallaActual= 0;
+        this.juego.reiniciar();
+      }else if (this.pantallaActual === 3){
+        this.pantallaActual = 0;
         this.juego.reiniciar();
       }
     }
